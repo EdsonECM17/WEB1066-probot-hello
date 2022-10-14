@@ -34,6 +34,17 @@ docker run  -it --rm \
             bash -c 'npm install && npm run dev'
 ```
 
+For powershell in Windows:
+```
+docker run  -it --rm `
+            -e APP_ID=abc `
+            -e PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----c29tZXByaXZhdGVzdHJpbmcK-----END RSA PRIVATE KEY-----" `
+            -w /home/node/probot-hello-dev `
+            -v  ${PWD}:/home/node/probot-hello-dev `
+            -p 3000:3000 probot-hello `
+            bash -c 'npm install && npm run dev'
+```
+
 # Lint Test
 `docker run -it --rm probot-hello npm run lint`
 
